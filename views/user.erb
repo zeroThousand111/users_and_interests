@@ -1,5 +1,5 @@
 <div id="name title">
-  <h2><%= @name %></h2>
+  <h2><%= @name.capitalize %></h2>
 </div>
 
 <br>
@@ -12,4 +12,17 @@
 
 <div id="interests">
   <p><strong>Interests:</strong> <%= @interests%></p>
+</div>
+
+<div id="links to other users">
+<h3> Other Users: </h3>
+  <ul>
+    <% @others.each do |other| %>
+      <li>
+        <a href=<%="#{other}"%>>
+          <%= other.capitalize %>
+        </a>
+      </li>
+    <% end %>
+  </ul>
 </div>
